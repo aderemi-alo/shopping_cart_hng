@@ -68,26 +68,6 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                       ),
                     );
-                    // Card(
-                    //   child: ListTile(
-                    //     title: Text(cart.cartItems[index].product.productName),
-                    //     subtitle:
-                    //         Text(cart.cartItems[index].product.productPrice),
-                    //     trailing: Column(
-                    //       children: [
-                    //         Text(cart.cartItems[index].quantity.toString()),
-                    //         IconButton(
-                    //             onPressed: () {
-                    //               setState(() {
-                    //                 cart.removeProduct(
-                    //                     cart.cartItems[index].product);
-                    //               });
-                    //             },
-                    //             icon: Icon(Icons.remove))
-                    //       ],
-                    //     ),
-                    //   ),
-                    // );
                   }),
             ),
             Text('Total Price: ₦ ${cart.totalPrice.toInt()}'),
@@ -123,7 +103,7 @@ class _CartScreenState extends State<CartScreen> {
         bottomNavigationBar: BottomNavBarModel(
           currentIndex: BottomNavBarModel.of(context).currentIndex,
           child: BottomNavBar(
-            items: navBarItems, // Use the centralized list
+            items: navBarItems,
             currentIndex: BottomNavBarModel.of(context).currentIndex,
             onTap: (index) => NavigatorUtil.navigateToScreen(context, index),
             selectedIconSize: 30,

@@ -91,7 +91,7 @@ class _ProductScreenState extends State<ProductScreen> {
       bottomNavigationBar: BottomNavBarModel(
         currentIndex: BottomNavBarModel.of(context).currentIndex,
         child: BottomNavBar(
-          items: navBarItems, // Use the centralized list
+          items: navBarItems,
           currentIndex: BottomNavBarModel.of(context).currentIndex,
           onTap: (index) => NavigatorUtil.navigateToScreen(context, index),
           unselectedIconColor: Colors.grey,
